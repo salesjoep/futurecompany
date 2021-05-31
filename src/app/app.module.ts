@@ -12,6 +12,14 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+
+// import { SettingsComponent } from './modules/admin/pages/settings/settings.component';
 
 const routerConfig: ExtraOptions = {
     scrollPositionRestoration: 'enabled',
@@ -20,10 +28,16 @@ const routerConfig: ExtraOptions = {
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        // SettingsComponent
     ],
     imports     : [
         BrowserModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        MatCheckboxModule,
+        MatButtonModule,
+        MatFormFieldModule,
         BrowserAnimationsModule,
         RouterModule.forRoot(appRoutes, routerConfig),
 
