@@ -78,7 +78,7 @@ export class AuthService
             switchMap((response: any) => {
 
                 // Store the access token in the local storage
-                this.accessToken = response.token;
+                this.accessToken = response.accessToken;
                 console.log(this.accessToken);
 
                 // Set the authenticated flag to true
@@ -144,9 +144,9 @@ export class AuthService
      *
      * @param user
      */
-    signUp(user: { name: string; email: string; password: string; company: string }): Observable<any>
+    signUp(user: { name: string; email: string; username: string; password: string; passwordConfirm: string; }): Observable<any>
     {
-        return this._httpClient.post('api/auth/sign-up', user);
+        return this._httpClient.post('http://localhost:3000/users/signup', user);
     }
 
     /**

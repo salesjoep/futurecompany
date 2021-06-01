@@ -30,6 +30,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 icon: 'heroicons_outline:cog',
                 link: '/pages/settings'
+            },
+            {
+                id: 'profile.sign-out',
+                title: 'Sign out',
+                type: 'basic',
+                icon: 'heroicons_outline:cog',
+                link: '/sign-out'
             }
         ]
     },
