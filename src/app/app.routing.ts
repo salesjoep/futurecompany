@@ -81,7 +81,10 @@ export const appRoutes: Route[] = [
             ]},
             {path: 'storefront', children: [
                 {path: 'products', loadChildren: () => import('app/modules/admin/apps/ecommerce/ecommerce.module').then(m => m.ECommerceModule)}
-            ]}
+            ]},
+            {path: 'customers', children: [
+                {path: 'allcustomers', loadChildren: () => import('app/modules/admin/apps/contacts/contacts.module').then(m => m.ContactsModule)},
+            ]},
         ]
     }
 ];
