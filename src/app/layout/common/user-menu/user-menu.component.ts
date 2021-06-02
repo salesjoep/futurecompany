@@ -19,7 +19,7 @@ export class UserMenuComponent implements OnInit, OnDestroy
     static ngAcceptInputType_showAvatar: BooleanInput;
     /* eslint-enable @typescript-eslint/naming-convention */
 
-    @Input() showAvatar: boolean = true;
+    @Input() showAvatar: boolean = false;
     user: User;
 
     private _unsubscribeAll: Subject<any> = new Subject<any>();
@@ -85,7 +85,7 @@ export class UserMenuComponent implements OnInit, OnDestroy
         // Update the user
         this._userService.update({
             ...this.user,
-            status
+            // status
         }).subscribe();
     }
 

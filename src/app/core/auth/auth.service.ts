@@ -78,7 +78,7 @@ export class AuthService
             switchMap((response: any) => {
 
                 // Store the access token in the local storage
-                this.accessToken = response.accessToken;
+                this.accessToken = response.token;
                 console.log(this.accessToken);
 
                 // Set the authenticated flag to true
@@ -110,7 +110,7 @@ export class AuthService
             switchMap((response: any) => {
 
                 // Store the access token in the local storage
-                this.accessToken = response.accessToken;
+                this.accessToken = response.token;
 
                 // Set the authenticated flag to true
                 this._authenticated = true;
