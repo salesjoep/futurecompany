@@ -19,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
+
 // import { SettingsComponent } from './modules/admin/pages/settings/settings.component';
 
 const routerConfig: ExtraOptions = {
@@ -28,7 +29,7 @@ const routerConfig: ExtraOptions = {
 
 @NgModule({
     declarations: [
-        AppComponent,
+        AppComponent
         // SettingsComponent
     ],
     imports     : [
